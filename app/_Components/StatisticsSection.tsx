@@ -1,4 +1,4 @@
-function Statistics() {
+function StatisticsSection() {
   return (
     <div className='flex justify-evenly'>
       <div className='flex flex-col items-center w-50 '>
@@ -17,4 +17,4 @@ function Statistics() {
   );
 }
 
-export default Statistics;
+export default StatisticsSection;
