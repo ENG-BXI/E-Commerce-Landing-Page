@@ -1,6 +1,6 @@
-import { Images10, Play_Icon } from "@/public/Assets";
-import Image from "next/image";
-import AccordionDemo from "./AccordionDemo";
+import {Images10, Play_Icon} from '@/app/Assets';
+import Image from 'next/image';
+import AccordionDemo from './AccordionDemo';
 
 function WhyUsSection() {
   return (

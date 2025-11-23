@@ -1,5 +1,5 @@
-import { Images11 } from "@/public/Assets";
-import Image from "next/image";
+import {Images11} from '@/app/Assets';
+import Image from 'next/image';
 
 function BannerSection() {
   return (
@@ -15,4 +15,4 @@ function BannerSection() {
   );
 }
 
-export default BannerSection
+export default BannerSection;

@@ -1,5 +1,5 @@
-import { Right_Arrow_Icon } from "@/public/Assets";
-import Image from "next/image";
+import {Right_Arrow_Icon} from '@/app/Assets';
+import Image from 'next/image';
 
 function ViewProductButton() {
   return (

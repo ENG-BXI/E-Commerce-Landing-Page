@@ -1,3 +1,4 @@
+'use client';
 import Header from './_Components/Header';
 import HeroSection from './_Components/HeroSection';
 import StatisticsSection from './_Components/StatisticsSection';
@@ -19,12 +20,3 @@ export default function Page() {
     </main>
   );
 }
-
-
-
-
-
-
-
-
-
