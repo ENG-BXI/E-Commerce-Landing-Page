@@ -1,4 +1,4 @@
-import {Images4, Images5, Images6, Images7, Images8, Images9} from '@/app/_Assets';
+import {Images4, Images5, Images6, Images7, Images8, Images9} from '@/public/_Assets';
 import {ImageProps} from 'next/image';
 import ProductCard from './ProductCard';
 import Badge from './Badge';

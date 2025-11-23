@@ -1,4 +1,4 @@
-import {Right_Arrow_Icon} from '@/app/_Assets';
+import {Right_Arrow_Icon} from '@/public/_Assets';
 import Image from 'next/image';
 
 function ViewProductButton() {

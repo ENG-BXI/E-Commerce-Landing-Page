@@ -1,4 +1,4 @@
-import {Images10, Play_Icon} from '@/app/_Assets';
+import {Images10, Play_Icon} from '@/public/_Assets';
 import Image from 'next/image';
 import AccordionDemo from './AccordionDemo';
 

@@ -1,4 +1,4 @@
-import {Images1, Right_Arrow_Icon, Images2, StarIcon, Images3} from '@/app/_Assets';
+import {Images1, Right_Arrow_Icon, Images2, StarIcon, Images3} from '@/public/_Assets';
 import {useGSAP} from '@gsap/react';
 import gsap from 'gsap';
 import {SplitText} from 'gsap/SplitText';

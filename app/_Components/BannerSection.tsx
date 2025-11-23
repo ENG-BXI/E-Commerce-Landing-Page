@@ -1,4 +1,4 @@
-import {Images11} from '@/app/_Assets';
+import {Images11} from '@/public/_Assets';
 import Image from 'next/image';
 
 function BannerSection() {
