@@ -1,4 +1,4 @@
-import {LOGO, Search_Icon, Cart_Icon, Profile_Icon} from '@/app/Assets';
+import {LOGO, Search_Icon, Cart_Icon, Profile_Icon} from '@/app/_Assets';
 import {useGSAP} from '@gsap/react';
 import gsap from 'gsap';
 import Image from 'next/image';
