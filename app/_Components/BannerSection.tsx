@@ -1,3 +1,5 @@
+'use client';
+
 import {Images11} from '@/public/_Assets';
 import {useGSAP} from '@gsap/react';
 import gsap from 'gsap';

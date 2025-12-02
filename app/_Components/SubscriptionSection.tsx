@@ -1,3 +1,5 @@
+'use client';
+
 function SubscriptionSection() {
   return (
     <section className='w-125 mx-auto'>
@@ -10,4 +12,4 @@ function SubscriptionSection() {
   );
 }
 
-export default SubscriptionSection
+export default SubscriptionSection;
