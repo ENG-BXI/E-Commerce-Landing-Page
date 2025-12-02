@@ -1,3 +1,4 @@
+'use client';
 import {Images1, Right_Arrow_Icon, Images2, StarIcon, Images3} from '@/public/_Assets';
 import {useGSAP} from '@gsap/react';
 import gsap from 'gsap';
