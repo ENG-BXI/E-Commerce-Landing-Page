@@ -4,7 +4,7 @@ import {Product} from './ProductsSection';
 
 function ProductCard({product}: {product: Product}) {
   return (
-    <section className='rounded-[30px] min-w-90 bg-[#F3F3F3] p-4 relative'>
+    <section className='rounded-[30px] translate-y-15 opacity-0 min-w-90 bg-[#F3F3F3] p-4 relative'>
       {/* Image */}
       <div className='relative mb-6 h-56 w-full overflow-hidden rounded-[26px]'>
         <Image src={product.image} alt={product.title} fill className='object-contain' />

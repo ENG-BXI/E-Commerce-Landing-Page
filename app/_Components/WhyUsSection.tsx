@@ -1,11 +1,26 @@
 import {Images10, Play_Icon} from '@/public/_Assets';
 import Image from 'next/image';
 import AccordionDemo from './AccordionDemo';
+import {useGSAP} from '@gsap/react';
+import {useRef} from 'react';
+import gsap from 'gsap';
 
 function WhyUsSection() {
+  const container = useRef<HTMLDivElement>(null);
+  const leftSide = useRef<HTMLDivElement>(null);
+  const RightSide = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({scrollTrigger: {trigger: container.current, start: 'top 60%', markers: true}, defaults: {duration: 1.5, x: 0, opacity: 100}});
+      tl.to(leftSide.current, {});
+      tl.to(RightSide.current, {}, '0');
+    },
+    {scope: container}
+  );
   return (
-    <section className='flex mx-auto  justify-between max-w-250'>
-      <div className='flex flex-col gap-3'>
+    <section ref={container} className='flex mx-auto overflow-hidden justify-between max-w-250'>
+      <div ref={leftSide} className='flex -translate-x-120 opacity-0  flex-col gap-3'>
         <div className='w-120 relative'>
           <Image className='object-contain rounded-2xl w-full h-full' src={Images10} alt='Why Us Image' />
 
@@ -21,7 +36,7 @@ function WhyUsSection() {
           Watch the video and learn more <br /> about ,ModNest
         </h3>
       </div>
-      <div className='max-w-100'>
+      <div ref={RightSide} className='max-w-100 translate-x-120 opacity-0'>
         <div className='w-100'>
           <h2 className='text-4xl font-bold mb-3'>Why Choose Us</h2>
           <p className=''>how are the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, praesentium.</p>
