@@ -8,6 +8,7 @@ import SubscriptionSection from './_Components/SubscriptionSection';
 import ProductsSection from './_Components/ProductsSection';
 import {useEffect, useRef} from 'react';
 import ReactLenis, {LenisRef} from 'lenis/react';
+import gsap from 'gsap';
 
 export default function Page() {
   const lenisRef = useRef<LenisRef>(null);
