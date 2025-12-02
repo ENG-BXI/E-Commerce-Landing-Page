@@ -1,3 +1,5 @@
+'use client';
+
 import {LOGO, Search_Icon, Cart_Icon, Profile_Icon} from '@/public/_Assets';
 import {useGSAP} from '@gsap/react';
 import gsap from 'gsap';
