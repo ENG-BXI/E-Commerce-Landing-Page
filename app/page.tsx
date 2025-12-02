@@ -6,17 +6,30 @@ import WhyUsSection from './_Components/WhyUsSection';
 import BannerSection from './_Components/BannerSection';
 import SubscriptionSection from './_Components/SubscriptionSection';
 import ProductsSection from './_Components/ProductsSection';
+import {useEffect, useRef} from 'react';
+import ReactLenis, {LenisRef} from 'lenis/react';
 
 export default function Page() {
+  const lenisRef = useRef<LenisRef>(null);
+
+  useEffect(() => {
+    function update(time: number) {
+      lenisRef.current?.lenis?.raf(time * 500);
+    }
+    gsap.ticker.add(update);
+    return () => gsap.ticker.remove(update);
+  }, []);
   return (
-    <main className='container mx-auto'>
-      <Header />
-      <HeroSection />
-      <StatisticsSection />
-      <ProductsSection />
-      <WhyUsSection />
-      <BannerSection />
-      <SubscriptionSection />
-    </main>
+    <ReactLenis root options={{autoRaf: false}} ref={lenisRef}>
+      <main className='container mx-auto'>
+        <Header />
+        <HeroSection />
+        <StatisticsSection />
+        <ProductsSection />
+        <WhyUsSection />
+        <BannerSection />
+        <SubscriptionSection />
+      </main>
+    </ReactLenis>
   );
 }

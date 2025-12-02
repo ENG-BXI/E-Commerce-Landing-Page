@@ -3,35 +3,15 @@
 import {LOGO, Search_Icon, Cart_Icon, Profile_Icon} from '@/public/_Assets';
 import {useGSAP} from '@gsap/react';
 import gsap from 'gsap';
-import {ScrollTrigger} from 'gsap/all';
-import Lenis from 'lenis';
 import Image from 'next/image';
-import {useEffect, useRef} from 'react';
+import {useRef} from 'react';
 
 function Header() {
   const container = useRef(null);
   const logoRef = useRef<HTMLImageElement>(null);
   const navRef = useRef<HTMLElement>(null);
   const icons = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    // Initialize a new Lenis instance for smooth scrolling
-    const lenis = new Lenis();
 
-    // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
-    lenis.on('scroll', ScrollTrigger.update);
-
-    // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
-    // This ensures Lenis's smooth scroll animation updates on each GSAP tick
-    gsap.ticker.add(time => {
-      lenis.raf(time * 500); // Convert time from seconds to milliseconds
-    });
-
-    // Disable lag smoothing in GSAP to prevent any delay in scroll animations
-    gsap.ticker.lagSmoothing(0);
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
   useGSAP(
     () => {
       const tl = gsap.timeline();
