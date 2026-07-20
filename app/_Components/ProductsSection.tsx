@@ -37,14 +37,14 @@ function ProductsSection() {
     () => {
       const headerChars = SplitText.create(header.current, {type: 'chars'});
       const tl = gsap.timeline({
-        scrollTrigger: {trigger: header.current, start: 'center 70%', markers: true}
+        scrollTrigger: {trigger: header.current, start: 'center 70%'}
       });
       tl.set(header.current, {y: 0});
       tl.from(headerChars.chars, {
         y: 100,
-        duration: 0.7,
-        ease: 'power4.out',
-        stagger: 0.05
+        ease: 'circ.out',
+        stagger: 0.05,
+        duration: 0.3
       });
       tl.to(FilterButton.current!.childNodes, {duration: 0.7, y: 0, opacity: 100, stagger: {each: 0.2}}, '-=1.2');
       tl.to(
@@ -52,9 +52,9 @@ function ProductsSection() {
         {
           y: 0,
           opacity: 100,
-          stagger: 0.5,
-          duration: 2.5,
-          ease: 'power4.out'
+          stagger: 0.3,
+          duration: 0.8,
+          ease: 'power1.out'
         },
         '-=1.5'
       );
@@ -64,7 +64,7 @@ function ProductsSection() {
   return (
     <section ref={container} className='my-20 rounded-[40px] px-8 py-10'>
       <div className='flex flex-col items-center gap-5 text-center overflow-hidden'>
-        <h2 ref={header} className='text-4xl  -translate-y-10 will-change-[translate] font-bold text-black overflow-hidden'>
+        <h2 ref={header} className='text-4xl will-change-[translate] font-bold text-black overflow-hidden'>
           Our Best Quality Products
         </h2>
         <div ref={FilterButton} className='flex flex-wrap items-center overflow-hidden justify-center gap-3'>

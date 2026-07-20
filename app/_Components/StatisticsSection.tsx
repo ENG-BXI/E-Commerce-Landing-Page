@@ -13,13 +13,12 @@ function StatisticsSection() {
         y: 100,
         opacity: 0,
         stagger: {
-          each: 0.07
+          each: 0.15
         },
         scrollTrigger: {
           trigger: container.current,
           start: 'top 80%',
-          end: 'bottom bottom',
-          markers: true
+          end: 'bottom bottom'
         }
       });
     },

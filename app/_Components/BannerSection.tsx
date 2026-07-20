@@ -11,7 +11,15 @@ function BannerSection() {
   useGSAP(
     () => {
       gsap.to(container.current, {
-        scrollTrigger: {trigger: container.current, start: 'top 30%', pin: true, pinSpacing: true, scrub: 1},
+        scrollTrigger: {
+          trigger: container.current,
+          markers: true,
+          start: 'top 30%',
+          end: 'top -80%',
+          pin: true,
+          pinSpacing: true,
+          scrub: 1
+        },
         scale: 1.3
       });
     },

@@ -14,7 +14,7 @@ function WhyUsSection() {
 
   useGSAP(
     () => {
-      const tl = gsap.timeline({scrollTrigger: {trigger: container.current, start: 'top 60%', markers: true}, defaults: {duration: 1.5, x: 0, opacity: 100}});
+      const tl = gsap.timeline({scrollTrigger: {trigger: container.current, start: 'top 60%', markers: false}, defaults: {duration: 1.5, x: 0, opacity: 100}});
       tl.to(leftSide.current, {});
       tl.to(RightSide.current, {}, '0');
     },

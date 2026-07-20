@@ -9,6 +9,7 @@ import ProductsSection from './_Components/ProductsSection';
 import {useEffect, useRef} from 'react';
 import ReactLenis, {LenisRef} from 'lenis/react';
 import gsap from 'gsap';
+import Footer from './_Components/footer';
 
 export default function Page() {
   const lenisRef = useRef<LenisRef>(null);
@@ -31,6 +32,7 @@ export default function Page() {
         <BannerSection />
         <SubscriptionSection />
       </main>
+      <Footer />
     </ReactLenis>
   );
 }
