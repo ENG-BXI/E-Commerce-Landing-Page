@@ -8,7 +8,7 @@ const Footer = () => {
   const Connect = ['Instagram', 'FaceBook', 'Twitter'];
   const Supports = ['24/7 Support', 'Terms & Conditions '];
   return (
-    <footer className='w-full h-80 bg-black p-15 grid grid-cols-2 md:grid-cols-[250px_1fr_1fr_1fr_1fr]'>
+    <footer className='w-full min-h-80 bg-black p-15 grid grid-cols-2 md:grid-cols-[250px_1fr_1fr_1fr_1fr]'>
       <Image src={LOGO} alt='Logo Image' className='backdrop-brightness-150' />
       <div className='flex flex-col'>
         <h4 className='text-white mb-2 font-bold'>Services</h4>

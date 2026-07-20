@@ -25,7 +25,7 @@ function StatisticsSection() {
     {scope: container}
   );
   return (
-    <div ref={container} className='flex justify-evenly overflow-hidden'>
+    <div ref={container} className='flex flex-row flex-wrap gap-4 items-center justify-evenly overflow-hidden'>
       <div className='flex  flex-col items-center w-50 '>
         <h3 className='text-5xl font-bold text-black '>18K+</h3>
         <p>Happy and Lovely</p>
@@ -34,7 +34,7 @@ function StatisticsSection() {
         <h3 className='text-5xl font-bold text-black '>700</h3>
         <p>Happy and Lovely</p>
       </div>
-      <div className='flex flex-col items-center w-50 '>
+      <div className='flex flex-col items-center md:w-50 w-full'>
         <h3 className='text-5xl font-bold text-black '>85%</h3>
         <p>Happy and Lovely</p>
       </div>

@@ -45,7 +45,7 @@ function Header() {
   return (
     <header ref={container} className='flex w-0 mx-auto overflow-hidden sticky top-5  z-50 bg-white justify-between items-center my-5 py-2  rounded-3xl shadow-xl'>
       <Image ref={logoRef} className='-translate-y-20 opacity-0' src={LOGO} alt='Logo Image' />
-      <nav ref={navRef}>
+      <nav ref={navRef} className='hidden'>
         <ul className='flex justify-center items-center gap-x-3'>
           <li className='cursor-pointer -translate-y-20 opacity-0'>Product</li>
           <li className='cursor-pointer -translate-y-20 opacity-0'>About Us</li>

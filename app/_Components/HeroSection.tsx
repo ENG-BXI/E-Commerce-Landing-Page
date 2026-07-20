@@ -21,7 +21,7 @@ function HeroSection() {
         y: 100,
         opacity: 0,
         ease: 'circ.out',
-        stagger: 0.02,
+        stagger: 0.02
       });
       tl.to(heroImage.current, {y: 0, opacity: 100, ease: 'power4.out', duration: 2}, '-=1');
       tl.to(
@@ -42,9 +42,9 @@ function HeroSection() {
       <h1 ref={header as RefObject<HTMLDivElement>} className='header will-change-transform overflow-hidden opacity-0 text-6xl text-black -tracking-[0.10rem] text-center text-wrap font-bold'>
         Transform Your Space With <br /> Perfect Furniture
       </h1>
-      <div className='relative flex gap-x-5 overflow-hidden'>
+      <div className='relative flex flex-col md:flex-row gap-5 overflow-hidden'>
         {/* Hero Image And Profile Images */}
-        <div ref={heroImage} className='relative will-change-transform translate-y-50 opacity-0 w-200 h-90  overflow-hidden! rounded-4xl'>
+        <div ref={heroImage} className='relative will-change-transform translate-y-50 opacity-0 md:w-200 h-90  overflow-hidden! rounded-4xl'>
           <Image priority className='object-cover w-full h-full' src={Images1} alt='HeroImage' />
           <div className='absolute rounded-br-4xl w-50 h-20 top-0 left-0 bg-white '></div>
           <div className='bg-white absolute bottom-0 right-0 h-18 w-55 rounded-tl-4xl'></div>
@@ -56,10 +56,10 @@ function HeroSection() {
           </div>
         </div>
         {/* Right Images */}
-        <div ref={RightImage} className='flex gap-y-2 flex-col'>
+        <div ref={RightImage} className='flex gap-y-2 flex-col items-center'>
           {/* Top Image */}
-          <div className='flex translate-x-10 opacity-0 flex-col'>
-            <div className='w-50 h-35  overflow-hidden! rounded-3xl '>
+          <div className='flex translate-x-10 w-full md:w-50 opacity-0 flex-col'>
+            <div className='h-35 overflow-hidden! rounded-3xl '>
               <Image priority className='object-cover object-[25%_75%] w-full h-full ' src={Images2} alt='image2' />
             </div>
             <div className='flex justify-between items-center p-2'>
@@ -77,8 +77,8 @@ function HeroSection() {
             </div>
           </div>
           {/* Bottom Image */}
-          <div className='flex translate-x-10 opacity-0 flex-col'>
-            <div className='w-50 h-35  overflow-hidden! rounded-3xl '>
+          <div className='flex translate-x-10 w-full md:w-50 opacity-0 flex-col'>
+            <div className='h-35  overflow-hidden! rounded-3xl '>
               <Image priority className='object-cover object-[25%_75%] w-full h-full ' src={Images3} alt='image2' />
             </div>
             <div className='flex justify-between items-center p-2'>

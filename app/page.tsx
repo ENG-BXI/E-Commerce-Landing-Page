@@ -23,7 +23,7 @@ export default function Page() {
   }, []);
   return (
     <ReactLenis root options={{autoRaf: false}} ref={lenisRef}>
-      <main className='container mx-auto'>
+      <main className='container mx-auto px-2'>
         <Header />
         <HeroSection />
         <StatisticsSection />

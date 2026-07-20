@@ -21,9 +21,9 @@ function WhyUsSection() {
     {scope: container}
   );
   return (
-    <section ref={container} className='flex mx-auto overflow-hidden justify-between max-w-250'>
-      <div ref={leftSide} className='flex -translate-x-120 opacity-0  flex-col gap-3'>
-        <div className='w-120 relative'>
+    <section ref={container} className='flex flex-col gap-4 md:flex-row mx-auto overflow-hidden justify-between md:max-w-250'>
+      <div ref={leftSide} className='flex -translate-x-120 opacity-0 flex-col gap-3'>
+        <div className='md:w-120 relative'>
           <Image className='object-contain rounded-2xl w-full h-full' src={Images10} alt='Why Us Image' />
 
           <div className='bg-white flex justify-end items-end w-17 h-17 rounded-tl-2xl absolute bottom-0 right-0'>
@@ -38,7 +38,7 @@ function WhyUsSection() {
           Watch the video and learn more <br /> about ,ModNest
         </h3>
       </div>
-      <div ref={RightSide} className='max-w-100 translate-x-120 opacity-0'>
+      <div ref={RightSide} className='md:max-w-100 translate-x-120 opacity-0'>
         <div className='w-100'>
           <h2 className='text-4xl font-bold mb-3'>Why Choose Us</h2>
           <p className=''>how are the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, praesentium.</p>
